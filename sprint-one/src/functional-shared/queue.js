@@ -10,9 +10,10 @@ var Queue = function(){
 
 var queueMethods = {
   enqueue: function(val){
-    for(var i=0; i<this.count; i++){
-      this.storage[i+1] = this.storage[i];
+    for (var i = this.count; i > 0; i--) {
+      this.storage[i] = this.storage[i - 1];
     }
+
     this.count++;
     this.storage[0] = val;
   },
