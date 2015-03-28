@@ -2,6 +2,7 @@
 
 var Graph = function(){
   this.obj = {};
+  // this.edges
 };
 
 Graph.prototype.addNode = function(node){
